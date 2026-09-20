@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Simulado de História — Colonização</title>
+<meta name="description" content="Simulado de História sobre colonização portuguesa, francesa e inglesa.">
+<style>
+:root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#17202a;background:#f4f6f8}
+*{box-sizing:border-box}body{margin:0}.container{max-width:760px;margin:auto;padding:18px 14px 50px}
+.hero{background:#17202a;color:#fff;border-radius:24px;padding:24px 20px;margin-bottom:18px}
+.hero h1{margin:0 0 8px;font-size:28px}.hero p{margin:0;line-height:1.5;color:#dce3e8}
+.progress{position:sticky;top:0;z-index:3;background:#f4f6f8;padding:8px 0}
+.bar{height:9px;background:#dfe4e8;border-radius:99px;overflow:hidden}.fill{height:100%;width:0;background:#17202a;transition:.2s}
+.card{background:#fff;border-radius:18px;padding:18px;margin:14px 0;box-shadow:0 2px 10px #00000010}
+.q{font-weight:800;line-height:1.45;margin-bottom:12px}
+label{display:block;background:#f7f8f9;border:1px solid #e1e5e8;border-radius:13px;padding:12px;margin:8px 0;cursor:pointer;line-height:1.4}
+label:has(input:checked){border-color:#17202a;background:#eef1f3}
+input[type=radio]{transform:scale(1.15);margin-right:8px}
+textarea{width:100%;min-height:115px;border:1px solid #d6dadd;border-radius:13px;padding:12px;font:inherit}
+button{width:100%;border:0;border-radius:15px;padding:16px;font-size:17px;font-weight:800;background:#17202a;color:#fff;cursor:pointer}
+button:disabled{opacity:.5}.notice{margin:12px 0;padding:13px;border-radius:13px;background:#fff3cd;color:#664d03;display:none}
+#resultado{display:none}.score{font-size:46px;font-weight:900;margin:5px 0 12px}
+.ok{background:#eefbf2!important;border-color:#b9e3c5!important}.mid{background:#fff9e8!important;border-color:#eadb9b!important}.bad{background:#fff6f6!important;border-color:#f0cccc!important}
+.explain{line-height:1.55}.muted{color:#667085;font-size:14px}
+</style>
+</head>
+<body>
+<main class="container">
+<section class="hero">
+<h1>📚 Simulado de História</h1>
+<p>Colonização Portuguesa, Francesa e Inglesa<br>20 questões • 10 objetivas + 10 discursivas</p>
+</section>
+
+<div class="progress"><div class="bar"><div class="fill" id="fill"></div></div><div class="muted" id="progressText">0/20 respondidas</div></div>
+
+<form id="quiz">
+<div class="card"><div class="q">1. O que significa colonização?</div>
+<label><input type="radio" name="q1" value="A">A) Apenas viajar para outro país</label>
+<label><input type="radio" name="q1" value="B">B) Processo de ocupar, controlar e organizar um território por uma potência</label>
+<label><input type="radio" name="q1" value="C">C) Trocar produtos sem controlar territórios</label>
+<label><input type="radio" name="q1" value="D">D) Criar uma cidade sem relação com outro país</label></div>
+
+<div class="card"><div class="q">2. O que era a metrópole?</div>
+<label><input type="radio" name="q2" value="A">A) O território indígena</label><label><input type="radio" name="q2" value="B">B) A colônia</label><label><input type="radio" name="q2" value="C">C) O país que controlava a colônia</label><label><input type="radio" name="q2" value="D">D) Um engenho</label></div>
+
+<div class="card"><div class="q">3. Em que ano Pedro Álvares Cabral chegou ao território que hoje é o Brasil?</div>
+<label><input type="radio" name="q3" value="A">A) 1492</label><label><input type="radio" name="q3" value="B">B) 1500</label><label><input type="radio" name="q3" value="C">C) 1530</label><label><input type="radio" name="q3" value="D">D) 1607</label></div>
+
+<div class="card"><div class="q">4. Quem liderou a expedição portuguesa de 1530 ligada ao início da colonização mais efetiva?</div>
+<label><input type="radio" name="q4" value="A">A) Martim Afonso de Sousa</label><label><input type="radio" name="q4" value="B">B) Leif Erikson</label><label><input type="radio" name="q4" value="C">C) Jacques Cartier</label><label><input type="radio" name="q4" value="D">D) Cristóvão Colombo</label></div>
+
+<div class="card"><div class="q">5. O que eram as Capitanias Hereditárias?</div>
+<label><input type="radio" name="q5" value="A">A) Pequenas cidades independentes</label><label><input type="radio" name="q5" value="B">B) Grandes faixas de território entregues a donatários para administrar</label><label><input type="radio" name="q5" value="C">C) Colônias francesas</label><label><input type="radio" name="q5" value="D">D) Tribos indígenas</label></div>
+
+<div class="card"><div class="q">6. Em que ano as Capitanias Hereditárias foram instituídas?</div>
+<label><input type="radio" name="q6" value="A">A) 1500</label><label><input type="radio" name="q6" value="B">B) 1530</label><label><input type="radio" name="q6" value="C">C) 1534</label><label><input type="radio" name="q6" value="D">D) 1549</label></div>
+
+<div class="card"><div class="q">7. Quem foi o primeiro governador-geral do Brasil?</div>
+<label><input type="radio" name="q7" value="A">A) Tomé de Sousa</label><label><input type="radio" name="q7" value="B">B) José de Anchieta</label><label><input type="radio" name="q7" value="C">C) Samuel de Champlain</label><label><input type="radio" name="q7" value="D">D) D. João III</label></div>
+
+<div class="card"><div class="q">8. O que foi a Nova França?</div>
+<label><input type="radio" name="q8" value="A">A) Um território colonial francês na América do Norte</label><label><input type="radio" name="q8" value="B">B) Uma capitania portuguesa</label><label><input type="radio" name="q8" value="C">C) Uma colônia inglesa</label><label><input type="radio" name="q8" value="D">D) Uma região da África</label></div>
+
+<div class="card"><div class="q">9. Qual acontecimento é associado ao início da colonização inglesa permanente na América do Norte?</div>
+<label><input type="radio" name="q9" value="A">A) Quebec em 1608</label><label><input type="radio" name="q9" value="B">B) Jamestown em 1607</label><label><input type="radio" name="q9" value="C">C) São Vicente em 1532</label><label><input type="radio" name="q9" value="D">D) Vinland em 1000</label></div>
+
+<div class="card"><div class="q">10. As Treze Colônias eram:</div>
+<label><input type="radio" name="q10" value="A">A) Treze colônias inglesas na costa leste da América do Norte</label><label><input type="radio" name="q10" value="B">B) Treze capitanias portuguesas</label><label><input type="radio" name="q10" value="C">C) Treze colônias francesas</label><label><input type="radio" name="q10" value="D">D) Treze povos vikings</label></div>
+
+<div class="card"><div class="q">11. Explique com suas palavras o que é uma colônia.</div><textarea name="q11"></textarea></div>
+<div class="card"><div class="q">12. Explique a diferença entre colônia e metrópole.</div><textarea name="q12"></textarea></div>
+<div class="card"><div class="q">13. Quem foram Erik, o Vermelho, e Leif Erikson?</div><textarea name="q13"></textarea></div>
+<div class="card"><div class="q">14. O que aconteceu em 1492 e quem realizou essa viagem?</div><textarea name="q14"></textarea></div>
+<div class="card"><div class="q">15. Por que as Capitanias Hereditárias receberam esse nome?</div><textarea name="q15"></textarea></div>
+<div class="card"><div class="q">16. Explique o que eram os donatários.</div><textarea name="q16"></textarea></div>
+<div class="card"><div class="q">17. O que foi o Governo-Geral e quem foi seu primeiro governador?</div><textarea name="q17"></textarea></div>
+<div class="card"><div class="q">18. O que era a Nova França e cite Jacques Cartier ou Samuel de Champlain.</div><textarea name="q18"></textarea></div>
+<div class="card"><div class="q">19. Explique uma diferença entre as colônias inglesas do Norte e do Sul.</div><textarea name="q19"></textarea></div>
+<div class="card"><div class="q">20. Monte uma pequena linha do tempo usando pelo menos quatro datas: 1000, 1492, 1500, 1530, 1534, 1549, 1607 ou 1608.</div><textarea name="q20"></textarea></div>
+
+<div class="notice" id="notice"></div>
+<button type="button" id="finalizar">🏁 FINALIZAR SIMULADO</button>
+</form>
+
+<section id="resultado"></section>
+</main>
+
+<script>
+const g={q1:"B",q2:"C",q3:"B",q4:"A",q5:"B",q6:"C",q7:"A",q8:"A",q9:"B",q10:"A"};
+const exp={
+q1:"Colonização é o processo de ocupar, controlar e organizar um território por uma potência.",
+q2:"Metrópole é o país que controla a colônia. Portugal era a metrópole e o Brasil, uma colônia portuguesa.",
+q3:"Cabral chegou ao território que hoje é o Brasil em 1500.",
+q4:"Martim Afonso de Sousa comandou a expedição de 1530, ligada ao início da colonização portuguesa mais efetiva.",
+q5:"As Capitanias Hereditárias eram grandes faixas de território administradas por donatários, com direitos e responsabilidades definidos pela Coroa.",
+q6:"As Capitanias Hereditárias foram instituídas em 1534, durante o reinado de D. João III.",
+q7:"Tomé de Sousa foi o primeiro governador-geral e chegou em 1549; Salvador foi a sede do Governo-Geral.",
+q8:"Nova França era o conjunto de territórios coloniais franceses na América do Norte, sobretudo áreas do atual Canadá e partes dos atuais Estados Unidos.",
+q9:"Jamestown, fundada em 1607, é associada ao primeiro assentamento inglês permanente na América do Norte.",
+q10:"As Treze Colônias eram colônias inglesas na costa leste da América do Norte."
+};
+const d={
+q11:{k:["território","control","dominad"],e:"Colônia é um território controlado por uma metrópole."},
+q12:{k:["colônia","metrópole","país"],e:"Colônia é o território controlado; metrópole é o país que exerce esse controle."},
+q13:{k:["erik","vermelho","leif","greenland","groenlândia","vinland"],e:"Erik, o Vermelho ficou ligado à Groenlândia e era pai de Leif Erikson. Leif é associado à viagem nórdica a Vinland, na América do Norte, por volta do ano 1000."},
+q14:{k:["1492","colombo","cristóvão","cristovao","caribe"],e:"Em 1492, Cristóvão Colombo, patrocinado pela Coroa espanhola, chegou ao Caribe."},
+q15:{k:["heredit","herdeiro","família","familia","filho","descendent"],e:"O nome vem do fato de os direitos de administração poderem ser transmitidos aos herdeiros do donatário."},
+q16:{k:["donat","administr","território","capitania","defend","povoar"],e:"Donatários eram pessoas que receberam capitanias para administrá-las, povoá-las, defendê-las e promover seu desenvolvimento econômico dentro das regras da Coroa."},
+q17:{k:["governo-geral","governo geral","tomé","tome","1549","salvador"],e:"O Governo-Geral buscou centralizar a administração. Tomé de Sousa foi o primeiro governador-geral e chegou em 1549."},
+q18:{k:["nova frança","nova franca","cartier","champlain","canad","quebec","québec","1534","1608"],e:"Nova França era o conjunto de territórios coloniais franceses na América do Norte. Cartier explorou a região a partir de 1534; Champlain fundou Quebec em 1608."},
+q19:{k:["norte","sul","agricultura","comércio","comercio","pesca","navio","plantation","escrav","tabaco","arroz","algodão","algodao"],e:"No Norte havia destaque para comércio, pesca, navegação e agricultura diversificada. No Sul predominavam grandes propriedades agrícolas de exportação e trabalho escravizado."},
+q20:{k:["1000","1492","1500","1530","1534","1549","1607","1608"],e:"Uma linha do tempo possível: c.1000 — Leif/Vinland; 1492 — Colombo; 1500 — Cabral; 1530 — Martim Afonso; 1534 — Capitanias; 1549 — Governo-Geral; 1607 — Jamestown; 1608 — Quebec."}
+};
+const norm=s=>s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+const esc=s=>s.replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+function update(){
+ let n=0;
+ for(let i=1;i<=10;i++)if(document.querySelector('input[name=q'+i+']:checked'))n++;
+ for(let i=11;i<=20;i++)if(document.querySelector('[name=q'+i+']').value.trim())n++;
+ document.getElementById("fill").style.width=(n/20*100)+"%";
+ document.getElementById("progressText").textContent=n+"/20 respondidas";
+}
+document.addEventListener("input",update);document.addEventListener("change",update);
+
+document.getElementById("finalizar").addEventListener("click",()=>{
+ let falt=[];
+ for(let i=1;i<=10;i++)if(!document.querySelector('input[name=q'+i+']:checked'))falt.push(i);
+ for(let i=11;i<=20;i++)if(!document.querySelector('[name=q'+i+']').value.trim())falt.push(i);
+ const notice=document.getElementById("notice");
+ if(falt.length){
+  notice.style.display="block";
+  notice.innerHTML="⚠️ <b>Termine o simulado antes de finalizar.</b><br>Faltam as questões: "+falt.join(", ")+".";
+  notice.scrollIntoView({behavior:"smooth",block:"center"});return;
+ }
+ notice.style.display="none";grade();
+});
+
+function grade(){
+ let score=0, wrong=[];
+ for(let i=1;i<=10;i++){
+  let a=document.querySelector('input[name=q'+i+']:checked').value;
+  if(a===g["q"+i])score++;else wrong.push({n:i,s:"❌ Errado",c:"bad",ans:a,cor:g["q"+i],e:exp["q"+i]});
+ }
+ for(let i=11;i<=20;i++){
+  let t=document.querySelector('[name=q'+i+']').value.trim(), z=d["q"+i], hits=z.k.filter(k=>norm(t).includes(norm(k))).length;
+  let min=Math.max(1,Math.ceil(z.k.length*.25)), mid=Math.max(min+1,Math.ceil(z.k.length*.45));
+  let pts=hits>=mid&&t.length>=20?1:(hits>=min&&t.length>=10?.5:0);score+=pts;
+  if(pts<1)wrong.push({n:i,s:pts?".🟡 Mais ou menos":"❌ Errado",c:pts?"mid":"bad",ans:t,e:z.e});
+ }
+ let n=score%1?score.toFixed(1):score.toFixed(0);
+ let msg=score===20?"🏆 Perfeito!":score>=16?"🔥 Mandou muito bem!":score>=12?"👏 Bom resultado!":score>=10?"📚 Revise os erros e tente novamente.":"💪 Revise o conteúdo e tente de novo.";
+ let out='<div class="card"><h2>📊 Resultado final</h2><div class="score">'+n+'/20</div><p><b>'+msg+'</b></p><p>As 20 questões foram concluídas e corrigidas.</p></div>';
+ if(!wrong.length)out+='<div class="card ok"><h3>🎉 Nenhum erro!</h3><p>Você acertou tudo.</p></div>';
+ else {out+='<div class="card"><h3>🔎 O que revisar</h3>';
+ wrong.forEach(x=>out+='<div class="card '+x.c+'"><b>Questão '+x.n+' — '+x.s+'</b><p><b>Sua resposta:</b> '+esc(x.ans)+'</p>'+(x.cor?'<p><b>Resposta correta:</b> '+x.cor+'</p>':'')+'<p class="explain"><b>Explicação:</b> '+x.e+'</p></div>');
+ out+='</div>';}
+ out+='<div class="card"><button type="button" onclick="location.reload()">🔄 Fazer novamente</button></div>';
+ const r=document.getElementById("resultado");r.innerHTML=out;r.style.display="block";
+ document.getElementById("quiz").style.display="none";r.scrollIntoView({behavior:"smooth"});
+}
+update();
+</script>
+</body></html>
